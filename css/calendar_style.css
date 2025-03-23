@@ -1,0 +1,176 @@
+/* กำหนดสไตล์พื้นฐานสำหรับ body ของหน้า */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://marketplace.canva.com/EAFbycIFTyY/3/0/1600w/canva-%E0%B8%AA%E0%B8%B5%E0%B8%9F%E0%B9%89%E0%B8%B2-%E0%B8%AA%E0%B8%B5%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%A7-%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4-%E0%B8%94%E0%B8%AD%E0%B8%81%E0%B9%84%E0%B8%A1%E0%B9%89-%E0%B9%81%E0%B8%A1%E0%B8%A7-%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%88%E0%B8%AD%E0%B8%84%E0%B8%AD%E0%B8%A1-%E0%B9%80%E0%B8%94%E0%B8%AA%E0%B8%81%E0%B8%97%E0%B9%8D%E0%B8%AD%E0%B8%9A%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B8%9E%E0%B8%B4%E0%B8%A7%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C--uOBeTOjXLU.jpg');
+    /* เพิ่มภาพเป็นพื้นหลัง */
+    background-size: cover;
+    /* ทำให้ภาพครอบคลุมทั้งหน้าจอ */
+    background-position: center center;
+    /* จัดตำแหน่งภาพให้อยู่กลาง */
+    background-repeat: no-repeat;
+    /* ป้องกันไม่ให้ภาพซ้ำ */
+    margin: 0;
+    /* ลบช่องว่างรอบๆ */
+    padding: 0;
+    /* ลบช่องว่างภายใน */
+    color: #0b0909;
+}
+
+/* กำหนดสไตล์สำหรับหัวข้อ h1 */
+h1 {
+    text-align: center;
+    /* จัดข้อความให้กึ่งกลาง */
+    font-size: 32px;
+    /* กำหนดขนาดตัวอักษรเป็น 32px */
+    margin-top: 5px;
+    /* ขยับขึ้น 20px */
+    color: #000000;
+    /* กำหนดสีของข้อความเป็นสีเทาเข้ม */
+    margin-bottom: 10px;
+    /* เพิ่มช่องว่างด้านล่างหัวข้อ 20px */
+}
+
+/* กำหนดสไตล์สำหรับกิจกรรมในช่อง */
+.fc-daygrid-event {
+    background-color: #2962fd !important;
+    /* เปลี่ยนสีพื้นหลังของกิจกรรม */
+    color: #fffdfd !important;
+    /* เปลี่ยนสีข้อความให้ชัดเจนขึ้น */
+    border-radius: 5px;
+    /* ทำขอบมน */
+    padding: 2px;
+    font-size: 0.85em;
+    display: flex;
+    /* ใช้ flexbox เพื่อจัดตำแหน่ง */
+    align-items: center;
+    /* จัดตำแหน่งแนวตั้งให้อยู่กลาง */
+    justify-content: center;
+    /* จัดตำแหน่งแนวนอนให้อยู่กลาง */
+    text-align: center;
+    /* จัดข้อความให้อยู่กึ่งกลาง */
+}
+
+.fc-day-today {
+    background-color: rgb(241, 193, 35) !important;
+    /* ทำให้วันปัจจุบันเด่นขึ้น */
+}
+
+/* กำหนดสไตล์สำหรับปฏิทิน */
+/* กำหนดสไตล์สำหรับปฏิทิน */
+#calendar {
+    max-width: 800px;
+    /* กำหนดความกว้างสูงสุดของปฏิทินเป็น 900px */
+    margin: 0 auto;
+    /* จัดตำแหน่งปฏิทินให้อยู่กึ่งกลาง */
+    background-color: rgb(255, 255, 255);
+    /* กำหนดพื้นหลังเป็นสีขาว */
+    border-radius: 10px;
+    /* มุมของปฏิทินจะโค้งมน */
+
+    border: 3px solid #000000;
+    /* เพิ่มเส้นขอบสีดำขนาด 3px */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* เพิ่มเงาให้กับปฏิทิน */
+    padding: 20px;
+    /* เพิ่มช่องว่างภายในปฏิทินขนาด 20px */
+}
+
+
+/* กำหนดสไตล์สำหรับ toolbar ของ FullCalendar */
+.fc-header-toolbar {
+    background-color: #050502;
+    /* กำหนดสีพื้นหลังของ toolbar เป็นสีน้ำเงิน */
+    color: rgb(255, 255, 255);
+    /* กำหนดสีข้อความใน toolbar เป็นสีขาว */
+    border-radius: 5px;
+    /* มุมของ toolbar จะโค้งมน */
+    margin-bottom: 20px;
+    /* เพิ่มช่องว่างด้านล่างของ toolbar 10px */
+}
+
+/* กำหนดสไตล์สำหรับแต่ละวันในปฏิทิน */
+.fc-daygrid-day {
+    padding: 10px;
+    /* เพิ่มช่องว่างภายในแต่ละวัน 10px */
+    border-radius: 5px;
+    /* มุมของแต่ละวันจะโค้งมน */
+    transition: background-color 0.3s ease;
+    /* เพิ่มการเปลี่ยนสีพื้นหลังเมื่อมีการ hover */
+}
+
+/* กำหนดสไตล์เมื่อมีการ hover วันในปฏิทิน */
+.fc-daygrid-day:hover {
+    background-color: #bee2fc;
+    /* เปลี่ยนสีพื้นหลังเป็นสีน้ำเงินอ่อนเมื่อ hover */
+}
+
+/* ปรับขนาดและสีของข้อความ */
+.fc-event-time {
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    /* ป้องกันเวลาโดนตัด */
+}
+
+.fc-event-title {
+    display: block;
+    /* ให้ชื่อกิจกรรมขึ้นบรรทัดใหม่ */
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+    /* ทำให้ข้อความไม่เกินขอบ */
+    max-width: 100%;
+    /* จำกัดขนาดของชื่อกิจกรรม */
+    white-space: normal;
+    /* ให้ขึ้นบรรทัดใหม่อัตโนมัติ */
+}
+
+
+/* กำหนดสไตล์สำหรับกิจกรรมที่มีพื้นหลังสี solid */
+.fc-event.fc-event-solid {
+    background-color: #3471ff;
+    /* กำหนดสีพื้นหลังของกิจกรรม solid เป็นสีน้ำเงิน */
+}
+
+
+/* กำหนดสไตล์สำหรับปุ่มใน FullCalendar */
+.fc-button {
+    background-color: #ffffff;
+    /* กำหนดสีพื้นหลังของปุ่มเป็นสีส้ม */
+    color: white;
+    /* กำหนดสีข้อความในปุ่มเป็นสีขาว */
+    font-weight: bold;
+    /* ทำให้ข้อความในปุ่มหนา */
+    border-radius: 5px;
+    /* มุมของปุ่มจะโค้งมน */
+}
+
+/* กำหนดสไตล์สำหรับชื่อหัวข้อ toolbar ใน FullCalendar */
+.fc-toolbar-title {
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    /* กำหนดขนาดตัวอักษรของชื่อหัวข้อ toolbar เป็น 24px */
+    font-weight: bold;
+    /* ทำให้ข้อความหนา */
+}
+
+/* กำหนดสไตล์สำหรับส่วนต่างๆ ของ toolbar */
+.fc-toolbar-chunk {
+    font-size: 16px;
+    /* กำหนดขนาดตัวอักษรของส่วนต่างๆ ใน toolbar เป็น 16px */
+}
+
+/* กำหนดสไตล์สำหรับหัวตารางวันในปฏิทิน */
+.fc-col-header {
+    background-color: #001884;
+    /* เปลี่ยนสีพื้นหลังของหัวตารางวันเป็นสีเขียว */
+    color: white;
+    /* เปลี่ยนสีข้อความเป็นสีขาว */
+    font-weight: bold;
+    /* ทำให้ข้อความหนา */
+    text-align: center;
+    /* จัดข้อความให้อยู่กึ่งกลาง */
+    padding: 10px;
+    /* เพิ่มช่องว่างภายในหัวตารางวัน */
+}

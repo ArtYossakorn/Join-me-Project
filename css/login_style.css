@@ -1,0 +1,180 @@
+/* General styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url(../img/IT.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: cover;
+        background-attachment: scroll;
+    }
+}
+
+/* Container Styling */
+.container {
+    width: 150%;
+    max-width: 500px;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%) translateX(-10%);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #333;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Form Styling */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    color: #555;
+    font-weight: 500;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: #007bff;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+/* Modal Styling (if used) */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* เพิ่มสไตล์สำหรับข้อความแจ้งเตือน */
+.alert {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.button-group button,
+.button-group .btn-link {
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-group button {
+    background-color: #333;
+    color: white;
+    border: none;
+}
+
+.button-group button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.button-group .btn-link {
+    display: inline-block;
+    background-color: #ccc;
+    color: #333;
+    text-decoration: none;
+}
+
+.button-group .btn-link:hover {
+    background-color: #bbb;
+}
+
+.message {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 16px;
+    margin-top: -10px;
+}

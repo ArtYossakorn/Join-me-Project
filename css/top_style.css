@@ -1,0 +1,1423 @@
+/* Google Font Import - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --primary-color: #0E4BF1;
+    --panel-color: #FFF;
+    --text-color: #000;
+    --black-light-color: #707070;
+    --border-color: #e6e5e6;
+    --toggle-color: #DDD;
+    --box1-color: #4DA3FF;
+    --box2-color: #FFE6AC;
+    --box3-color: #E7D1FC;
+    --title-icon-color: #FFF;
+    --button-color: #0E4BF1;
+
+    --tran-05: all 0.5s ease;
+    --tran-03: all 0.3s ease;
+    --tran-02: all 0.2s ease;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--panel-color);
+}
+
+body.dark {
+    --primary-color: #3A3B3C;
+    --panel-color: #242526;
+    --text-color: #CCC;
+    --black-light-color: #CCC;
+    --border-color: #4D4C4C;
+    --toggle-color: #FFF;
+    --box1-color: #3A3B3C;
+    --box2-color: #3A3B3C;
+    --box3-color: #3A3B3C;
+    --title-icon-color: #CCC;
+    --button-color: #4DA3FF;
+}
+
+.dashboard {
+    position: relative;
+    left: 250px;
+    background-color: var(--panel-color);
+    height: auto;
+    width: calc(100% - 250px);
+    padding: 10px 14px;
+    transition: var(--tran-05);
+}
+
+body.dark .dashboard {
+    background-color: var(--panel-color);
+    color: var(--text-color);
+}
+
+nav.close~.dashboard {
+    left: 73px;
+    width: calc(100% - 73px);
+}
+
+.dashboard .top {
+    position: fixed;
+    top: 0;
+    left: 250px;
+    display: flex;
+    width: calc(100% - 250px);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    background-color: var(--panel-color);
+    transition: var(--tran-05);
+}
+
+nav.close~.dashboard .top {
+    left: 73px;
+    width: calc(100% - 73px);
+}
+
+.dashboard .top .sidebar-toggle {
+    font-size: 26px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.dashboard .top .search-box {
+    position: relative;
+    height: 45px;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 30px;
+}
+
+.top .search-box input {
+    position: absolute;
+    border: 1px solid var(--border-color);
+    background-color: var(--panel-color);
+    padding: 0 25px 0 50px;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 400;
+    outline: none;
+}
+
+.top .search-box i {
+    position: absolute;
+    left: 15px;
+    font-size: 22px;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--black-light-color);
+}
+
+.top img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.dashboard .dash-content {
+    padding-top: 40px;
+}
+
+.dash-content .title {
+    display: flex;
+    align-items: center;
+    margin: 50px 0 30px 0;
+}
+
+nav.close~.dashboard .dash-content .title {
+    left: 73px;
+    width: calc(100% - 73px);
+}
+
+.dash-content .title i {
+    position: relative;
+    height: 35px;
+    width: 35px;
+    background-color: var(--primary-color);
+    border-radius: 6px;
+    color: var(--title-icon-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.dash-content .title .text {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-left: 10px;
+}
+
+/* Form Style Add Users */
+.dash-content .container,
+.dash-content .container-form {
+    max-width: 75%;
+    background-color: #FFF;
+    border-color: var(--border-color);
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+body.dark .dash-content .container {
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border-color: var(--border-color);
+}
+
+body.dark .dash-content .container-form {
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border-color: var(--border-color);
+}
+
+.dash-content .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #f1f0f0;
+}
+
+.dash-content .container-form {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.dash-content .form-group {
+    margin-bottom: 10px;
+}
+
+.dash-content label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    padding-left: 5%;
+}
+
+.dash-content input[type=text],
+.dash-content select,
+.dash-content textarea {
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.dark .dash-content input[type=text],
+body.dark .dash-content select,
+body.dark .dash-content textarea {
+    background-color: var(--text-color);
+}
+
+.dash-content .container button {
+    margin-left: auto;
+    margin-right: 20px;
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.dash-content .container-form button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 10%;
+}
+
+.dash-content button:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+body.dark .dash-content .container-form button {
+    background-color: var(--button-color);
+}
+
+body.dark .dash-content .container button {
+    background-color: #dc3545;
+}
+
+.dash-content .container h2 .text {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-left: 10px;
+}
+
+/* Manage user page */
+.dashboard .container-manage,
+.dashboard .container-table {
+    max-width: 90%;
+    background-color: #FFF;
+    border-color: var(--border-color);
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+body.dark .dashboard .container-manage {
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border-color: var(--border-color);
+}
+
+body.dark .dashboard .container-manage button {
+    background-color: var(--button-color);
+}
+
+body.dark .dashboard .container-table {
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border-color: var(--border-color);
+}
+
+.dashboard .container-manage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #f1f0f0;
+}
+
+.dashboard .container-table {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.dashboard .container-manage button {
+    margin-left: auto;
+    margin-right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard .container-manage h2 .text {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-left: 10px;
+}
+
+.table-content {
+    margin-top: 20px;
+}
+
+.table-content table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: -10px;
+}
+
+.table-content th,
+.table-content td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.table-content th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+body.dark .table-content th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.table-content td {
+    background-color: #f9f9f9;
+}
+
+body.dark .table-content td {
+    background-color: var(--primary-color);
+}
+
+.table-content tr:nth-child(even) td {
+    background-color: #f2f2f2;
+}
+
+body.dark .table-content tr:nth-child(even) td {
+    background-color: var(--primary-color);
+}
+
+.table-content button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+.table-content button:hover {
+    background-color: #218838;
+}
+
+.table-content button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.table-content h2 a button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.table-content h2 a button:hover {
+    background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+
+    .table-content table,
+    .table-content th,
+    .table-content td {
+        font-size: 14px;
+    }
+
+    .table-content {
+        overflow-x: auto;
+    }
+
+    .title .text {
+        font-size: 18px;
+    }
+
+    .search-box input {
+        width: 150px;
+    }
+}
+
+/* Add Post Form Styles */
+.container-add-post {
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .container-add-post {
+    background-color: var(--primary-color);
+}
+
+.add-activity-form .form-group {
+    margin-bottom: 20px;
+}
+
+.add-activity-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+body.dark .add-activity-form label {
+    color: var(--text-color);
+}
+
+.add-activity-form input,
+.add-activity-form textarea,
+.add-activity-form select {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-activity-form input:focus,
+.add-activity-form textarea:focus,
+.add-activity-form select:focus {
+    border-color: #4267b2;
+    outline: none;
+    box-shadow: 0 0 3px rgba(66, 103, 178, 0.5);
+}
+
+/* Container Add Image */
+/* Hide the default file input */
+.container-add-image {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .container-add-image {
+    background-color: var(--text-color);
+}
+
+.container-add-image input[type="file"] {
+    display: none;
+}
+
+/* Container for the file upload button */
+.container-add-image .file-upload-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Style for the custom upload icon */
+.container-add-image .file-upload-icon i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 24px;
+    transition: background-color 0.3s, transform 0.2s ease;
+    margin-left: -5%;
+    margin-top: -10px;
+}
+
+.container-add-image body.dark .file-upload-icon i {
+    background-color: var(--button-color);
+}
+
+/* Icon hover effect */
+.container-add-image .file-upload-icon i:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Icon active effect */
+.container-add-image .file-upload-icon:active {
+    transform: scale(1);
+    /* Reset zoom when clicked */
+}
+
+.container-add-image .image-preview-container,
+.container-add-image .video-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+    width: 100%;
+    justify-content: start;
+}
+
+.container-add-image .image-preview-container img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+/* เอฟเฟกต์เมื่อวางเมาส์บนภาพ */
+.container-add-image .image-preview-container img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* End Container Add Image */
+
+/* Submit Button */
+.add-activity-form .btn-submit {
+    display: block;
+    width: 15%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 5%;
+    transition: background-color 0.3s;
+}
+
+body.dark .add-activity-form .btn-submit {
+    background-color: var(--button-color);
+}
+
+.add-activity-form .btn-submit:hover {
+    background-color: var(--primary-color);
+}
+
+/* Media Queries for Smaller Devices */
+@media screen and (max-width: 768px) {
+    .dashboard .top {
+        left: 73px;
+        width: calc(100% - 73px);
+    }
+
+    .top .search-box input {
+        width: 150px;
+    }
+
+    .add-activity-form input,
+    .add-activity-form select,
+    .add-activity-form textarea {
+        width: 100%;
+    }
+}
+
+/* Hompage post content */
+.post-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    background-color: var(--panel-color);
+}
+
+.post-container {
+    width: 100%;
+    max-width: 50%;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+.post-container .user-image {
+    vertical-align: middle;
+    width: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* .post-container h2 {
+    display: inline-block;
+    vertical-align: center;
+    justify-items: center;
+    margin-left: 10px;
+} */
+/* ================================================================= */
+.post-container .post-details {
+    display: flex;
+    align-items: top;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 16px;
+    /* color: black; */
+}
+
+.post-container .post-details .post-meta {
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-size: 16px;
+    margin-top: 3px;
+}
+
+.post-meta-foot {
+    margin-left: 63px;
+    margin-top: -32px;
+    margin-bottom: 30px;
+}
+
+.post-container .post-details .user-role,
+.post-container .post-details .post-date {
+    display: block;
+    /* ทำให้ user-role และ post-date อยู่ในบรรทัดใหม่ */
+    margin-top: 5px;
+    /* เพิ่มระยะห่างจากข้อมูลข้างบน */
+}
+
+.post-container .username {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.post-container .user-role {
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
+    background-color: #d4edda;
+    border-radius: 5px;
+    padding: 2px 6px;
+    /* เพิ่มช่องว่างภายใน */
+    display: inline-block;
+    /* ทำให้ขนาดขยายตามเนื้อหา */
+}
+
+.post-container .post-date {
+    font-size: 14px;
+}
+
+body.dark .post-container {
+    background-color: var(--primary-color);
+    color: var(--black-light-color);
+}
+
+body.dark .post-container .post-details {
+    background-color: var(--primary-color);
+    color: var(--black-light-color);
+}
+
+/* ================================================================= */
+
+.post-container p {
+    margin: 2px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+.post-container img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+}
+
+/* Post container for single and multiple image gallery */
+/* Gallery container */
+.post-container .image-gallery {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.post-container .image-gallery img {
+    width: 100%;
+    height: auto;
+    display: none;
+    /* Initially hide all images */
+    object-fit: cover;
+}
+
+.post-container .gallery-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 1;
+    /* Ensure the buttons appear above images */
+}
+
+.post-container .gallery-buttons button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.post-container .gallery-buttons button:hover {
+    opacity: 1;
+}
+
+.post-container .gallery-buttons button:focus {
+    outline: none;
+}
+
+.post-container .gallery-buttons .prev {
+    width: 9%;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.post-container .gallery-buttons .next {
+    width: 9%;
+    border-radius: 50%;
+    margin-right: 10px;
+    /* margin-left: 90%; */
+}
+
+
+.post-container .btn-submit {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: var(--panel-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.post-container .btn-submit:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--primary-color);
+}
+
+body.dark .post-container .btn-submit {
+    background-color: var(--button-color);
+}
+
+/* Style for the alert message box */
+.alert {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+.alert.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.alert.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.alert .close-btn {
+    float: right;
+    cursor: pointer;
+    font-size: 18px;
+    background: none;
+    border: none;
+    color: #721c24;
+}
+
+/* Profile */
+.profile {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile h2 {
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.profile p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.profile-field {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.profile-field strong {
+    width: 150px;
+    font-weight: 500;
+}
+
+.profile-field span {
+    flex: 1;
+}
+
+body.dark .profile {
+    background-color: var(--primary-color);
+}
+
+/* Register Container */
+/* Activity Section */
+.activity-group {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.activity-group h2 {
+    font-size: 1.8rem;
+    color: #3e3e3e;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #3e3e3e;
+    margin-bottom: 15px;
+}
+
+/* Table Container */
+.register-table-container {
+    overflow-x: auto;
+    max-width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+h4 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: -13px;
+}
+
+/* Table */
+.register-table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+.register-table-container table th,
+.register-table-container table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Table Header */
+.register-table-container table th {
+    background-color: #f7f7f7;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Table Rows */
+.register-table-container table tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.register-table-container table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Table Footer */
+.register-table-container table td[colspan="6"] {
+    text-align: center;
+    font-weight: bold;
+    color: #888;
+}
+
+/* Admin-Only Column */
+.register-table-container table td:last-child {
+    text-align: center;
+}
+
+/* Buttons */
+.register-table-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.register-table-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .register-table-container table {
+        font-size: 0.9rem;
+    }
+
+    .register-table-container table th,
+    .register-table-container table td {
+        padding: 8px;
+    }
+}
+
+/* Container: Align content in the center */
+.register-row {
+    margin: 0;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.register-column {
+    flex: 0 0 75%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffff;
+}
+
+/* Card Header */
+.card-header {
+    background-color: var(--button-color);
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    /* Ensure header takes up 100% of column width */
+    border-radius: 10px;
+    /* Add rounded corners */
+
+}
+
+/* Card Body */
+.card-body {
+    padding: 12px;
+    color: black;
+    font-size: 14px;
+    width: 100%;
+    /* Ensure body takes up 100% of column width */
+}
+
+/* Card Footer */
+.card-footer {
+    padding: 12px;
+    text-align: center;
+    width: 100%;
+    /* Ensure footer takes up 100% of column width */
+}
+
+/* Style the button */
+.card-footer .btn {
+    background-color: var(--button-color);
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.card-footer .btn:hover {
+    background-color: #0056b3;
+}
+
+body.dark .register-column {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+body.dark .card-body {
+    color: white;
+}
+
+/* Dropdown btn */
+.post-details .dropbtn {
+    background-color: var(--title-icon-color);
+    color: black;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    /* ให้ปุ่มกลม */
+    width: 37px;
+    /* กำหนดความกว้าง */
+    height: 37px;
+    /* กำหนดความสูง */
+    display: flex;
+    /* ใช้ Flexbox เพื่อจัดตำแหน่ง */
+    align-items: center;
+    /* จัดข้อความให้อยู่กลางในแนวตั้ง */
+    justify-content: center;
+    /* จัดข้อความให้อยู่กลางในแนวนอน */
+    text-align: center;
+}
+
+body.dark .post-details .dropbtn {
+    background-color: var(--primary-color);
+    color: var(--black-light-color);
+}
+
+.post-details .dropdown {
+    margin-left: auto;
+    /* ดัน dropdown ไปทางขวาสุด */
+    position: relative;
+}
+
+.post-details .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.post-details .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.post-details .dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.post-details .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Image Preview in Edit Post */
+.image-preview {
+    position: relative;
+    display: inline-block;
+    /* ให้ภาพเรียงต่อกัน */
+    margin: 5px;
+    flex-direction: column-reverse;
+}
+
+.image-preview img {
+    width: 100px;
+    /* ปรับขนาดรูป */
+    height: auto;
+    border-radius: 5px;
+    display: block;
+}
+
+.image-preview .remove-image {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(255, 0, 0, 0.7);
+    color: white;
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.image-preview .remove-image:hover {
+    background-color: red;
+}
+
+.profile-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.profile-actions a {
+    margin: 10px;
+    padding: 0;
+}
+
+
+.edit-profile-btn,
+.change-password-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.01s ease;
+    margin: 0;
+}
+
+.edit-profile-btn:hover,
+.change-password-btn:hover {
+    background-color: #45a049;
+}
+
+.edit-profile-submit,
+.change-password-submit {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.01s ease;
+    margin: 0;
+}
+
+/* จัดรูปภาพให้อยู่ตรงกลาง */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* กำหนดรูปโปรไฟล์ */
+#profileImagePreview {
+    display: none;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* จัด label และ input ให้อยู่บรรทัดเดียวกันและตรงกลาง */
+.profile-upload label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.profile-upload input[type="text"],
+.profile-upload input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.profile-upload input[type="file"] {
+    width: 80%;
+    /* ให้กว้างเท่ากับ input อื่น */
+    padding: 10px;
+    /* เพิ่มพื้นที่ภายใน */
+    border: 1px solid #ccc;
+    /* เพิ่มเส้นขอบ */
+    border-radius: 5px;
+    /* มุมมน */
+    font-size: 14px;
+    /* ขนาดฟอนต์ที่เหมาะสม */
+    background-color: #fff;
+    /* สีพื้นหลัง */
+    cursor: pointer;
+    /* เปลี่ยนเคอร์เซอร์เป็นแบบมือเมื่อชี้ */
+    margin: 0 auto;
+    /* จัดให้อยู่ตรงกลาง */
+    display: block;
+    /* แก้ไขให้เป็นแท่งยาวและจัดตรงกลาง */
+}
+
+.profile-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* border-bottom: 1px solid #eee; */
+    padding-bottom: 10px;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-field.profile-edit strong {
+    font-size: 16px;
+    color: #333;
+    margin-right: 10px;
+    /* เพิ่มระยะห่างเล็กน้อยจาก input */
+}
+
+.profile-field.profile-edit input[type="file"],
+.profile-field.profile-edit input[type="text"] {
+    width: 85%;
+    /* ทำให้ input กว้างเท่ากัน */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* ทำมุมโค้งมน */
+    font-size: 14px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.profile-field.profile-edit strong,
+body.dark .profile-field.profile-edit input[type="text"] {
+    color: var(--text-color);
+}
+
+body.dark .profile-field.profile-edit input[type="file"] {
+    background-color: var(--black-light-color);
+    color: black;
+}
+
+/* Style for the form */
+.check-in-form {
+    display: inline-block;
+    text-align: center;
+    padding-left: 5px;
+}
+
+/* Style for the input field */
+.check-in-input {
+    padding: 8px;
+    width: 200px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style for the submit button */
+.check-in-button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Hover effect for the submit button */
+.check-in-button:hover {
+    background-color: #45a049;
+}
+
+/* Focus effect for the input field */
+.check-in-input:focus {
+    outline-color: #4CAF50;
+}
+
+.download-pdf {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.download-button {
+    display: inline-block;
+    /* Make the link behave like a block-level element */
+    padding: 10px 20px;
+    /* Add some padding to make it look like a button */
+    background-color: #4CAF50;
+    /* Green background color */
+    color: white;
+    /* White text */
+    text-align: center;
+    /* Center the text */
+    text-decoration: none;
+    /* Remove underline from the link */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 16px;
+    /* Adjust font size */
+    transition: background-color 0.3s ease;
+    /* Add a smooth transition on hover */
+    margin-left: 20px;
+}
+
+.download-button:hover {
+    background-color: #45a049;
+    /* Darken the green color on hover */
+}
+
+.download-button:active {
+    background-color: #3e8e41;
+    /* Further darken when the button is clicked */
+}

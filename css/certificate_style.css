@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.a4-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.a4-page {
+    width: 90vw;
+    height: calc(90vw * (794 / 1123));
+    max-width: 1126px;
+    max-height: 798px;
+    background: url('../img/cer1.jpg') no-repeat center center;
+    background-size: cover;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vw;
+    text-align: center;
+    position: relative;
+}
+
+.text-content {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    font-size: 2vw;
+    color: rgb(0, 0, 0);
+    white-space: nowrap;
+    line-height: 0.4;
+}
+
+.text-content1 {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    font-size: 1.7vw;
+    color: rgb(0, 0, 0);
+    white-space: nowrap;
+    line-height: 0.7;
+}
+
+/* Button Style */
+#downloadPdf {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#downloadPdf:hover {
+    background-color: #0056b3;
+}
+
+.small-text {
+    font-size: 1.5vw;
+    position: absolute;
+    top: 38.5%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.name-text {
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5vw;
+    font-weight: bold;
+}
+
+.line {
+    position: absolute;
+    top: 75%;
+}
+
+.Tname {
+    position: absolute;
+    font-size: 1.5vw;
+    top: 79%;
+}
+
+.position {
+    position: absolute;
+    font-size: 1.5vw;
+    top: 84%;
+}
+
+.img {
+    position: absolute;
+    top: 65%;
+}
+
+.img img {
+    width: 75%;
+    height: 75%;
+}
+
+@media screen and (max-width: 768px) {
+    .a4-page {
+        width: 95vw;
+        height: calc(95vw * (794 / 1123));
+    }
+
+    .text-content {
+        font-size: 4vw;
+    }
+
+    .text-content1 {
+        font-size: 3.5vw;
+    }
+
+    .name-text {
+        font-size: 3.5vw;
+    }
+
+    .small-text {
+        font-size: 3vw;
+    }
+
+    .Tname, .position {
+        font-size: 3vw;
+    }
+}
